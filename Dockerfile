@@ -6,7 +6,7 @@
 #COPY ./webapp.war /usr/local/tomcat/webapps
 
 
-FROM openjdk:8
+FROM openjdk
 EXPOSE 8080
 ADD target/webapp.war webapp.war
 ENTRYPOINT ["java", "-jar", "/webapp.war"]
